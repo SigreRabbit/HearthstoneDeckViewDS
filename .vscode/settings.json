@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "off",
+    "editor.formatOnSave": false,
+    "ruff.enable": false,
+    "editor.defaultFormatter": null
+}
