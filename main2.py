@@ -31,6 +31,7 @@ async def deck(deck_code: str):
 if __name__ == "__main__":
     asyncio.run(
         deck(
-            "AAECAfHhBASYxAXzyAXO8Qb/9wYNh/YE8OgFhY4G/7oGkMsGoOIG4eoGn/EGrPEGvvEGwvEG4/EGqPcGAAA=",
+            # "AAECAfHhBASYxAXzyAXO8Qb/9wYNh/YE8OgFhY4G/7oGkMsGoOIG4eoGn/EGrPEGvvEGwvEG4/EGqPcGAAA=",
+            "AAECAf0GCv3EBfnGBab7BYCeBsekBpWzBuqzBse4Bs7xBtuXBwrX+gXxgAbHyQaZywb95gaf8Qao9waA+AaD+AaJ+AYAAQas6QX9xAXxswbHpAb3swbHpAbu3gbHpAaq6gb9xAXp7Qb9xAUAAA=="
         ),
     )

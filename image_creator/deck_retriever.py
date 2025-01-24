@@ -5,7 +5,8 @@ from framework import BlizzardAPI
 
 
 async def retrieve_deck(deck_code):
-    api = BlizzardAPI(CLIENT_ID, CLIENT_SECRET, proxies=PROXY)
+    # api = BlizzardAPI(CLIENT_ID, CLIENT_SECRET, proxies=PROXY)
+    api = BlizzardAPI(CLIENT_ID, CLIENT_SECRET, locale="ja_JP", proxies=PROXY)
     response = await api.get_from_code(deck_code)
     if "error" in response:
         print("error")
@@ -23,8 +24,9 @@ async def retrieve_deck(deck_code):
                 for i in range(len(response['cards'])):
                     if response['cards'][i]['id'] == 102983:
                         response['cards'][i]['manaCost'] = sum(i['manaCost'] for i in side["cardsInSideboard"])
-                        response['zilliax'] = '-'.join(map(str, sorted(
-                            [i['id'] for i in side["cardsInSideboard"] if i['isZilliaxFunctionalModule']])))
+                        # response['zilliax'] = '-'.join(map(str, sorted(
+                        #     [i['id'] for i in side["cardsInSideboard"] if i['isZilliaxFunctionalModule']])))
+                        response['zilliax'] ="102983-zilliax-deluxe-000"
             sideboard += side["cardsInSideboard"]
 
     if response["cardCount"] == 30 and len(response["cards"]) < 30:
